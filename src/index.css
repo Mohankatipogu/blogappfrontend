@@ -1,0 +1,16 @@
+@import url("/node_modules/bootstrap/dist/css/bootstrap.min.css");
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+    transition: 0.5s;
+    padding: 10px;
+}
+.container.dark{
+    background-color: #222;
+}

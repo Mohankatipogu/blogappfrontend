@@ -1,0 +1,12 @@
+.loginpage{
+    margin-top: 50%;
+}
+.buton{
+   height: 50px;
+   width: 100px;
+    background: #8ABFA3;
+    border-radius: 10px;
+}
+.buton:hover{
+    background-color:green;
+}
