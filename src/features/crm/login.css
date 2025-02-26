@@ -1,12 +1,25 @@
-.loginpage{
-    margin-top: 50%;
+body {
+    background-color: #f8f9fa;
 }
-.buton{
-   height: 50px;
-   width: 100px;
-    background: #8ABFA3;
-    border-radius: 10px;
+
+.login .form-control {
+    height: 45px;
+    font-size: 16px;
 }
-.buton:hover{
-    background-color:green;
+
+.login button {
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .login {
+        width: 100%;
+    }
 }

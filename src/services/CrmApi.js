@@ -10,31 +10,47 @@ export const CrmApi = createApi({
     },
   }),
   endpoints: (builder) => ({
+
     getLead: builder.query({
-      query: () => "/", 
+      query: () => "/api/leads",
     }),
+
     login: builder.mutation({
       query: (body) => ({
-        url: 'login', 
+        url: 'login',
         method: 'POST',
-        body, 
+        body,
       }),
     }),
+
     signup: builder.mutation({
       query: (user) => ({
         url: "signup",
         method: "POST",
-        body: user, 
+        body: user,
       }),
     }),
+
     addpost: builder.mutation({
-      query: (user) => ({
+      query: (post) => ({
         url: "/api/posts",
         method: "POST",
-        body: user, 
+        body: post,
       }),
+    }),
+    getpost: builder.query({
+      query: () => "/blogs",
+    }),
+    loginf: builder.query({
+      query: () => "/",
     }),
   }),
 });
-
-export const { useGetLeadQuery, useLoginMutation, useSignupMutation,useAddpostMutation} = CrmApi;
+export const { 
+  useGetLeadQuery, 
+  useLoginMutation, 
+  useSignupMutation, 
+  useAddpostMutation, 
+  useGetpostQuery,
+  useLoginfQuery,
+} = CrmApi;

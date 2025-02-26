@@ -5,13 +5,17 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import Login from './features/crm/login';
+import "fontawesome-free/css/all.min.css"
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
 import Signup from './features/crm/signup';
 import Home from './features/crm/Home';
-import Addpost from './features/crm/addpost';
+import Footer from './features/crm/footer';
+import Dashboard from './features/crm/dashboard';
+import GoogleAuth from './features/crm/Auth';
+import BlogUpload from './features/crm/uploadblog';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,8 +34,20 @@ const router = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: '/addpost',
-        element: <Addpost/>,
+        path: '/footer',
+        element: <Footer />,
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+      },
+      {
+        path: '/auth',
+        element:<GoogleAuth></GoogleAuth>
+      },
+      {
+        path: '/blogupload',
+        element:<BlogUpload></BlogUpload>
       },
     ],
   },
